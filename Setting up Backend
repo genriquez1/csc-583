@@ -1,0 +1,446 @@
+Microsoft Windows [Version 10.0.15063]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\Gerardo>vagrant
+Usage: vagrant [options] <command> [<args>]
+
+    -v, --version                    Print the version and exit.
+    -h, --help                       Print this help.
+
+Common commands:
+     box             manages boxes: installation, removal, etc.
+     connect         connect to a remotely shared Vagrant environment
+     destroy         stops and deletes all traces of the vagrant machine
+     global-status   outputs status Vagrant environments for this user
+     halt            stops the vagrant machine
+     help            shows the help for a subcommand
+     init            initializes a new Vagrant environment by creating a Vagrantfile
+     login           log in to HashiCorp's Vagrant Cloud
+     package         packages a running vagrant environment into a box
+     plugin          manages plugins: install, uninstall, update, etc.
+     port            displays information about guest port mappings
+     powershell      connects to machine via powershell remoting
+     provision       provisions the vagrant machine
+     push            deploys code in this environment to a configured destination
+     rdp             connects to machine via RDP
+     reload          restarts vagrant machine, loads new Vagrantfile configuration
+     resume          resume a suspended vagrant machine
+     share           share your Vagrant environment with anyone in the world
+     snapshot        manages snapshots: saving, restoring, etc.
+     ssh             connects to machine via SSH
+     ssh-config      outputs OpenSSH valid configuration to connect to the machine
+     status          outputs status of the vagrant machine
+     suspend         suspends the machine
+     up              starts and provisions the vagrant environment
+     validate        validates the Vagrantfile
+     version         prints current and latest Vagrant version
+
+For help on any individual command run `vagrant COMMAND -h`
+
+Additional subcommands are available, but are either more advanced
+or not commonly used. To see all subcommands, run the command
+`vagrant list-commands`.
+
+C:\Users\Gerardo>cd C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>vagrant global-status
+id       name    provider   state   directory
+-------------------------------------------------------------------------------------------
+c181e1a  default virtualbox running C:/Users/Gerardo/Desktop/Fall 2017/New Folder/toro-net
+
+The above shows information about all known Vagrant environments
+on this machine. This data is cached and may not be completely
+up-to-date. To interact with any of the machines, you can go to
+that directory and run Vagrant, or you can use the ID directly
+with Vagrant commands from any directory. For example:
+"vagrant destroy 1a2b3c4d"
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>cd toro-net/client/
+The system cannot find the path specified.
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>yarn run dev
+'yarn' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>vagrant yarn run dev
+Usage: vagrant [options] <command> [<args>]
+
+    -v, --version                    Print the version and exit.
+    -h, --help                       Print this help.
+
+Common commands:
+     box             manages boxes: installation, removal, etc.
+     connect         connect to a remotely shared Vagrant environment
+     destroy         stops and deletes all traces of the vagrant machine
+     global-status   outputs status Vagrant environments for this user
+     halt            stops the vagrant machine
+     help            shows the help for a subcommand
+     init            initializes a new Vagrant environment by creating a Vagrantfile
+     login           log in to HashiCorp's Vagrant Cloud
+     package         packages a running vagrant environment into a box
+     plugin          manages plugins: install, uninstall, update, etc.
+     port            displays information about guest port mappings
+     powershell      connects to machine via powershell remoting
+     provision       provisions the vagrant machine
+     push            deploys code in this environment to a configured destination
+     rdp             connects to machine via RDP
+     reload          restarts vagrant machine, loads new Vagrantfile configuration
+     resume          resume a suspended vagrant machine
+     share           share your Vagrant environment with anyone in the world
+     snapshot        manages snapshots: saving, restoring, etc.
+     ssh             connects to machine via SSH
+     ssh-config      outputs OpenSSH valid configuration to connect to the machine
+     status          outputs status of the vagrant machine
+     suspend         suspends the machine
+     up              starts and provisions the vagrant environment
+     validate        validates the Vagrantfile
+     version         prints current and latest Vagrant version
+
+For help on any individual command run `vagrant COMMAND -h`
+
+Additional subcommands are available, but are either more advanced
+or not commonly used. To see all subcommands, run the command
+`vagrant list-commands`.
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>vagrant ssh
+VM must be running to open SSH connection. Run `vagrant up`
+to start the virtual machine.
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>cd C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>vagrant resume
+==> default: Waiting for machine to boot. This may take a few minutes...
+The guest machine entered an invalid state while waiting for it
+to boot. Valid states are 'restoring, running'. The machine is in the
+'poweroff' state. Please verify everything is configured
+properly and try again.
+
+If the provider you're using has a GUI that comes with it,
+it is often helpful to open that and watch the machine, since the
+GUI often has more helpful error messages than Vagrant can retrieve.
+For example, if you're using VirtualBox, run `vagrant up` while the
+VirtualBox GUI is open.
+
+The primary issue for this error is that the provider you're using
+is not properly configured. This is very rarely a Vagrant issue.
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Checking if box 'ubuntu/xenial64' is up to date...
+==> default: Clearing any previously set forwarded ports...
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+    default: Adapter 1: nat
+==> default: Forwarding ports...
+    default: 8080 (guest) => 8080 (host) (adapter 1)
+    default: 3000 (guest) => 3000 (host) (adapter 1)
+    default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Running 'pre-boot' VM customizations...
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+    default: SSH address: 127.0.0.1:2222
+    default: SSH username: ubuntu
+    default: SSH auth method: password
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+    default: The guest additions on this VM do not match the installed version of
+    default: VirtualBox! In most cases this is fine, but in rare cases it can
+    default: prevent things such as shared folders from working properly. If you see
+    default: shared folder errors, please make sure the guest additions within the
+    default: virtual machine match the version of VirtualBox you have installed on
+    default: your host and reload your VM.
+    default:
+    default: Guest Additions Version: 5.0.40
+    default: VirtualBox Version: 5.1
+==> default: Mounting shared folders...
+    default: /home/ubuntu/toro-net => C:/Users/Gerardo/Desktop/Fall 2017/New Folder/toro-net
+==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
+==> default: flag to force provisioning. Provisioners marked to run always will still run.
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>cd toro-net/client/
+The system cannot find the path specified.
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>cd toro-net/client
+The system cannot find the path specified.
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>cd toro-net\client
+The system cannot find the path specified.
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>dir
+ Volume in drive C is Windows OS
+ Volume Serial Number is 0246-9FF7
+
+ Directory of C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net
+
+09/26/2017  06:32 PM    <DIR>          .
+09/26/2017  06:32 PM    <DIR>          ..
+09/26/2017  06:32 PM               213 .gitignore
+09/26/2017  06:32 PM                16 CONTRIBUTING.md
+09/26/2017  06:32 PM            11,558 LICENSE
+09/26/2017  06:32 PM             6,303 README.md
+09/26/2017  06:32 PM             3,396 Vagrantfile
+09/26/2017  06:32 PM    <DIR>          api
+09/26/2017  06:32 PM    <DIR>          client
+09/26/2017  06:32 PM               688 dev-env.sh
+09/26/2017  06:32 PM               379 docker-compose.yml
+09/26/2017  06:32 PM             1,745 requirements.md
+09/26/2017  06:33 PM    <DIR>          .vagrant
+09/26/2017  11:56 PM            40,523 ubuntu-xenial-16.04-cloudimg-console.log
+               9 File(s)         64,821 bytes
+               5 Dir(s)  75,150,262,272 bytes free
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>cd client
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net\client>yarn run dev
+'yarn' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net\client>vagrant global-status
+id       name    provider   state   directory
+-------------------------------------------------------------------------------------------
+c181e1a  default virtualbox running C:/Users/Gerardo/Desktop/Fall 2017/New Folder/toro-net
+
+The above shows information about all known Vagrant environments
+on this machine. This data is cached and may not be completely
+up-to-date. To interact with any of the machines, you can go to
+that directory and run Vagrant, or you can use the ID directly
+with Vagrant commands from any directory. For example:
+"vagrant destroy 1a2b3c4d"
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net\client>vagrant resume c181e1a
+Vagrant cannot forward the specified ports on this VM, since they
+would collide with some other application that is already listening
+on these ports. The forwarded port to 8080 is already in use
+on the host machine.
+
+To fix this, modify your current project's Vagrantfile to use another
+port. Example, where '1234' would be replaced by a unique host port:
+
+  config.vm.network :forwarded_port, guest: 8080, host: 1234
+
+Sometimes, Vagrant will attempt to auto-correct this for you. In this
+case, Vagrant was unable to. This is usually because the guest machine
+is in a state which doesn't allow modifying port forwarding. You could
+try 'vagrant reload' (equivalent of running a halt followed by an up)
+so vagrant can attempt to auto-correct this upon booting. Be warned
+that any unsaved work might be lost.
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net\client>vagrant resume c181e1a
+Vagrant cannot forward the specified ports on this VM, since they
+would collide with some other application that is already listening
+on these ports. The forwarded port to 8080 is already in use
+on the host machine.
+
+To fix this, modify your current project's Vagrantfile to use another
+port. Example, where '1234' would be replaced by a unique host port:
+
+  config.vm.network :forwarded_port, guest: 8080, host: 1234
+
+Sometimes, Vagrant will attempt to auto-correct this for you. In this
+case, Vagrant was unable to. This is usually because the guest machine
+is in a state which doesn't allow modifying port forwarding. You could
+try 'vagrant reload' (equivalent of running a halt followed by an up)
+so vagrant can attempt to auto-correct this upon booting. Be warned
+that any unsaved work might be lost.
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net\client>cd C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>vagrant provision
+==> default: Running provisioner: shell...
+    default: Running: inline script
+==> default: Executing: /tmp/tmp.grKX2ubOA8/gpg.1.sh --keyserver
+==> default: hkp://keyserver.ubuntu.com:80
+==> default: --recv
+==> default: 0C49F3730359A14518585931BC711F9BA15703C6
+==> default: gpg:
+==> default: requesting key A15703C6 from hkp server keyserver.ubuntu.com
+==> default: gpg:
+==> default: key A15703C6: "MongoDB 3.4 Release Signing Key <packaging@mongodb.com>" not changed
+==> default: gpg:
+==> default: Total number processed: 1
+==> default: gpg:
+==> default:              unchanged: 1
+: not found: /home/ubuntu/toro-net/dev-env.sh: 3: /home/ubuntu/toro-net/dev-env.sh:
+==> default: deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 multiverse
+: not found: /home/ubuntu/toro-net/dev-env.sh: 4: /home/ubuntu/toro-net/dev-env.sh:
+==> default: Ign:1 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 InRelease
+==> default: Hit:2 http://archive.ubuntu.com/ubuntu xenial InRelease
+==> default: Hit:3 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 Release
+==> default: Get:4 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+==> default: Get:5 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
+==> default: Get:7 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
+==> default: Hit:8 https://deb.nodesource.com/node_8.x xenial InRelease
+==> default: Fetched 306 kB in 1s (282 kB/s)
+==> default: Reading package lists...
+: not found: /home/ubuntu/toro-net/dev-env.sh: 5: /home/ubuntu/toro-net/dev-env.sh:
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default:
+==> default: Reading state information...
+==> default: mongodb-org is already the newest version (3.4.9).
+==> default: 0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+: not found: /home/ubuntu/toro-net/dev-env.sh: 6: /home/ubuntu/toro-net/dev-env.sh:
+==> default: ## Installing the NodeSource Node.js v8.x repo...
+==> default:
+==> default: ## Populating apt-get cache...
+==> default:
+==> default: + apt-get update
+==> default: Ign:1 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 InRelease
+==> default: Hit:2 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 Release
+==> default: Hit:3 http://archive.ubuntu.com/ubuntu xenial InRelease
+==> default: Hit:5 http://security.ubuntu.com/ubuntu xenial-security InRelease
+==> default: Hit:6 https://deb.nodesource.com/node_8.x xenial InRelease
+==> default: Hit:7 http://archive.ubuntu.com/ubuntu xenial-updates InRelease
+==> default: Hit:8 http://archive.ubuntu.com/ubuntu xenial-backports InRelease
+==> default: Reading package lists...
+==> default:
+==> default: ## Confirming "xenial" is supported...
+==> default:
+==> default: + curl -sLf -o /dev/null 'https://deb.nodesource.com/node_8.x/dists/xenial/Release'
+==> default:
+==> default: ## Adding the NodeSource signing key to your keyring...
+==> default: + curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+==> default: OK
+==> default:
+==> default: ## Creating apt sources list file for the NodeSource Node.js v8.x repo...
+==> default: + echo 'deb https://deb.nodesource.com/node_8.x xenial main' > /etc/apt/sources.list.d/nodesource.list
+==> default: + echo 'deb-src https://deb.nodesource.com/node_8.x xenial main' >> /etc/apt/sources.list.d/nodesource.list
+==> default:
+==> default: ## Running `apt-get update` for you...
+==> default:
+==> default: + apt-get update
+==> default: Ign:1 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 InRelease
+==> default: Hit:2 http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.4 Release
+==> default: Hit:4 http://security.ubuntu.com/ubuntu xenial-security InRelease
+==> default: Hit:5 https://deb.nodesource.com/node_8.x xenial InRelease
+==> default: Hit:6 http://archive.ubuntu.com/ubuntu xenial InRelease
+==> default: Hit:7 http://archive.ubuntu.com/ubuntu xenial-updates InRelease
+==> default: Hit:8 http://archive.ubuntu.com/ubuntu xenial-backports InRelease
+==> default: Reading package lists...
+==> default:
+==> default: ## Run `apt-get install nodejs` (as root) to install Node.js v8.x and npm
+: not found: /home/ubuntu/toro-net/dev-env.sh: 8: /home/ubuntu/toro-net/dev-env.sh:
+==> default: Reading package lists...
+==> default: Building dependency tree...
+==> default:
+==> default: Reading state information...
+==> default: nodejs is already the newest version (8.6.0-1nodesource1).
+==> default: 0 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
+: not found: /home/ubuntu/toro-net/dev-env.sh: 9: /home/ubuntu/toro-net/dev-env.sh:
+==> default: npm
+==> default:
+==> default: WARN
+==> default:
+==> default: deprecated
+==> default:  babel@6.23.0: In 6.x, the babel package has been deprecated in favor of babel-cli. Check https://opencollective.com/babel to support the Babel maintainers
+==> default: npm
+==> default:
+==> default: WARN
+==> default:
+==> default: deprecated
+==> default:  minimatch@2.0.10: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+==> default: npm
+==> default:
+==> default: WARN
+==> default:
+==> default: deprecated
+==> default:  minimatch@0.2.14: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+==> default: npm
+==> default:
+==> default: WARN
+==> default:
+==> default: deprecated
+==> default:  graceful-fs@1.2.3: graceful-fs v3.0.0 and before will fail on node releases >= v7.0. Please update to graceful-fs@^4.0.0 as soon as possible. Use 'npm ls graceful-fs' to find it in the tree.
+==> default: /usr/bin/babel -> /usr/lib/node_modules/babel/lib/cli.js
+==> default: /usr/bin/babel-node -> /usr/lib/node_modules/babel/lib/cli.js
+==> default: /usr/bin/babel-external-helpers -> /usr/lib/node_modules/babel/lib/cli.js
+==> default: /usr/bin/gulp -> /usr/lib/node_modules/gulp/bin/gulp.js
+==> default: /usr/bin/yarn -> /usr/lib/node_modules/yarn/bin/yarn.js
+==> default: /usr/bin/yarnpkg -> /usr/lib/node_modules/yarn/bin/yarn.js
+==> default: + gulp@3.9.1
+==> default: + yarn@1.1.0
+==> default: + babel@6.23.0
+==> default: updated 3 packages in 10.186s
+: not found: /home/ubuntu/toro-net/dev-env.sh: 11: /home/ubuntu/toro-net/dev-env.sh:
+==> default: yarn install v1.1.0
+==> default: [1/4] Resolving packages...
+==> default: [2/4] Fetching packages...
+==> default: [3/4] Linking dependencies...
+==> default: error An unexpected error occurred: "EPROTO: protocol error, symlink '../acorn/bin/acorn' -> '/home/ubuntu/toro-net/api/node_modules/acorn-jsx/node_modules/.bin/acorn'".
+==> default: info If you think this is a bug, please open a bug report with the information provided in "/home/ubuntu/toro-net/api/yarn-error.log".
+==> default: info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
+: not found: /home/ubuntu/toro-net/dev-env.sh: 14: /home/ubuntu/toro-net/dev-env.sh: yarn
+The SSH command responded with a non-zero exit status. Vagrant
+assumes that this means the command failed. The output for this command
+should be in the log above. Please read the output to determine what
+went wrong.
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>vagrant ssh
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-96-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+1 package can be updated.
+0 updates are security updates.
+
+
+Last login: Wed Sep 27 03:28:24 2017 from 10.0.2.2
+ubuntu@ubuntu-xenial:~$ sudo service mongod start
+ubuntu@ubuntu-xenial:~$ cd toro-net/api/
+ubuntu@ubuntu-xenial:~/toro-net/api$ gulp
+[07:27:13] Requiring external module babel-register
+[07:27:20] Using gulpfile ~/toro-net/api/gulpfile.babel.js
+[07:27:20] Starting 'clean'...
+[07:27:20] Starting 'watch'...
+[07:27:20] Finished 'watch' after 117 ms
+[07:27:20] Finished 'clean' after 182 ms
+[07:27:20] Starting 'babel'...
+[07:27:21] Finished 'babel' after 895 ms
+[07:27:21] Starting 'default'...
+[07:27:21] Finished 'default' after 54 μs
+yarn start
+ubuntu@ubuntu-xenial:~/toro-net/api$ yarn start
+yarn run v1.1.0
+$ node dist/server
+/home/ubuntu/toro-net/api/node_modules/express-jwt/lib/index.js:20
+  if (!options || !options.secret) throw new Error('secret should be set');
+                                   ^
+
+Error: secret should be set
+    at module.exports (/home/ubuntu/toro-net/api/node_modules/express-jwt/lib/index.js:20:42)
+    at Object.<anonymous> (/home/ubuntu/toro-net/api/dist/server.js:39:44)
+    at Module._compile (module.js:624:30)
+    at Object.Module._extensions..js (module.js:635:10)
+    at Module.load (module.js:545:32)
+    at tryModuleLoad (module.js:508:12)
+    at Function.Module._load (module.js:500:3)
+    at Function.Module.runMain (module.js:665:10)
+    at startup (bootstrap_node.js:187:16)
+    at bootstrap_node.js:607:3
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+ubuntu@ubuntu-xenial:~/toro-net/api$ yarn
+yarn install v1.1.0
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+error An unexpected error occurred: "EPROTO: protocol error, symlink '../acorn/bin/acorn' -> '/home/ubuntu/toro-net/api/node_modules/acorn-jsx/node_modules/.bin/acorn'".
+info If you think this is a bug, please open a bug report with the information provided in "/home/ubuntu/toro-net/api/yarn-error.log".
+info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
+ubuntu@ubuntu-xenial:~/toro-net/api$ export SECRET=HelloWolrdofVue2017
+ubuntu@ubuntu-xenial:~/toro-net/api$ yarn start
+yarn run v1.1.0
+$ node dist/server
+
+Server listening at http://0.0.0.0:3000
+Mongoose default connection open to  mongodb://localhost:27017/haoc
+Mongoose default connection is open
