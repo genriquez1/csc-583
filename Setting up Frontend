@@ -1,0 +1,75 @@
+Microsoft Windows [Version 10.0.15063]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Users\Gerardo>C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net
+'C:\Users\Gerardo\Desktop\Fall' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Gerardo>cd C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net
+
+C:\Users\Gerardo\Desktop\Fall 2017\New Folder\toro-net>vagrant ssh
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-96-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+1 package can be updated.
+0 updates are security updates.
+
+
+Last login: Wed Sep 27 07:26:01 2017 from 10.0.2.2
+ubuntu@ubuntu-xenial:~$ cd toro-net/client/
+ubuntu@ubuntu-xenial:~/toro-net/client$ yarn run dev
+yarn run v1.1.0
+$ node build/dev-server.js
+
+
+(node:2892) UnhandledPromiseRejectionWarning: Unhandled promise rejection (rejection id: 1): Error: Exited with code 3
+(node:2892) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+(node:2892) DeprecationWarning: loaderUtils.parseQuery() received a non-string value which can be problematic, see https://github.com/webpack/loader-utils/issues/56
+parseQuery() will be replaced with getOptions() in the next major version of loader-utils.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ DONE  Compiled successfully in 40325ms                                                                         08:00:56
+
+> Listening at http://localhost:8080
+
+
+
+
+
+
